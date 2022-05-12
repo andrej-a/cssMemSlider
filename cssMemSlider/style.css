@@ -67,6 +67,15 @@
 
 /* CONTROL PANEL */
 
+.control_wrapper{
+    width: 100%;
+    max-height: 5rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper__control-panel {
     width: 100%;
     max-width: 60rem;
@@ -76,7 +85,6 @@
     margin-right: 2rem;
     margin-left: 2rem;
     justify-content: space-between;
-    background: #fff;
 }
 
 .description{
@@ -102,9 +110,11 @@
     width: 25%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-size: 1.5rem;
+    margin-left: 0.1rem;
+    color: #fff;
 }
 
 .control {
@@ -112,11 +122,11 @@
     width: auto;
     height: auto;
     display: flex;
+    gap: 0.5rem;
 }
 .control label {
     width: 2rem;
     height: 2rem;
-    margin: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,15 +148,15 @@ label:hover span{
 #one:checked ~ .wrapper__slider > .slider_display > .slider_inner{
     transform: translateX(0%);
 }
-#one:checked ~ .wrapper__control-panel > .description > .description__display > .description__inner{
+#one:checked ~ .control_wrapper .description > .description__display > .description__inner{
     transform: translateX(0%);
 }
-#one:checked ~ .wrapper__control-panel > .control > .label:nth-child(1) span{
+#one:checked ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(1) span{
     border: 0.2rem solid #4a47ec;
     background: transparent;
 }
 
-#one:checked:hover ~ .wrapper__control-panel > .control > .label:nth-child(1) span{
+#one:checked:hover ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(1) span{
     border: 0.2rem solid #d8d8dd;
 }
 
@@ -154,14 +164,14 @@ label:hover span{
 #two:checked ~ .wrapper__slider > .slider_display > .slider_inner{
     transform: translateX(-25%);
 }
-#two:checked ~ .wrapper__control-panel > .description > .description__display > .description__inner{
+#two:checked ~ .control_wrapper .description > .description__display > .description__inner{
     transform: translateX(-25%);
 }
-#two:checked ~ .wrapper__control-panel .label:nth-child(2) span{
+#two:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(2) span{
     border: 0.2rem solid #4a47ec;
     background: transparent;
 }
-#two:checked:hover ~ .wrapper__control-panel > .control > .label:nth-child(2) span{
+#two:checked:hover ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(2) span{
     border: 0.2rem solid #d8d8dd;
 }
 
@@ -169,14 +179,14 @@ label:hover span{
 #three:checked ~ .wrapper__slider > .slider_display > .slider_inner{
     transform: translateX(-50%);
 }
-#three:checked ~ .wrapper__control-panel > .description > .description__display > .description__inner{
+#three:checked ~ .control_wrapper .description > .description__display > .description__inner{
     transform: translateX(-50%);
 }
-#three:checked ~ .wrapper__control-panel .label:nth-child(3) span{
+#three:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(3) span{
     border: 0.2rem solid #4a47ec;
     background: transparent;
 }
-#three:checked:hover ~ .wrapper__control-panel > .control > .label:nth-child(3) span{
+#three:checked:hover ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(3) span{
     border: 0.2rem solid #d8d8dd;
 }
 
@@ -184,14 +194,14 @@ label:hover span{
 #four:checked ~ .wrapper__slider > .slider_display > .slider_inner{
     transform: translateX(-75%);
 }
-#four:checked ~ .wrapper__control-panel > .description > .description__display > .description__inner{
+#four:checked ~ .control_wrapper .description > .description__display > .description__inner{
     transform: translateX(-75%);
 }
-#four:checked ~ .wrapper__control-panel .label:nth-child(4) span{
+#four:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(4) span{
     border: 0.2rem solid #4a47ec;
     background: transparent;
 }
-#four:checked:hover ~ .wrapper__control-panel > .control > .label:nth-child(4) span{
+#four:checked:hover ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(4) span{
     border: 0.2rem solid #d8d8dd;
 }
 
