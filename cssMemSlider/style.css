@@ -9,18 +9,22 @@
     width: 100%;
     min-height: 50rem;
     height: 100vh;
-    background: #326ceb;
+    background: #19191a;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+ .wrapper input {
+    width: 0;
+    height: 0;
+}
+
 .wrapper__slider {
     width: 100%;
-    max-height: 35rem;
+    max-height: 30rem;
     height: 100%;
-    background: #575656;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,6 +37,7 @@
     max-height: 30rem;
     margin-right: 2rem;
     margin-left: 2rem;
+    border-radius: 10px;
     overflow: hidden;
     background: rgb(247, 220, 220);
 }
@@ -44,8 +49,7 @@
     display: flex;
 }
 .slider_inner .image {
-    max-width: 60rem;
-    width: 100%;
+    width: 25%;
     height: 100%;
 }
 .one {
@@ -60,3 +64,120 @@
 .four {
     background: yellow;
 }
+
+/* CONTROL PANEL */
+
+.wrapper__control-panel {
+    width: 100%;
+    max-width: 60rem;
+    height: 100%;
+    max-height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.description{
+    max-width: 20rem;
+    width: 100%;
+    height: auto;
+}
+.description__display{
+    max-width: 20rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.description__inner {
+    width: calc(100%*4);
+    display: flex;
+    height: 100%;
+    transition: all .3s ease;
+}
+.description__display .text{
+    display: block;
+    width: 25%;
+}
+
+.control {
+    max-width: 20rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    background: orange;
+}
+.control label {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: purple;
+    cursor: pointer;
+}
+.control label span {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 0;
+    background: #4a47ec;
+    transition: all .3s ease;
+}
+label:hover span{
+    background: #d8d8dd;
+}
+
+#one:checked ~ .wrapper__slider > .slider_display > .slider_inner{
+    transform: translateX(0%);
+}
+#one:checked ~ .wrapper__control-panel > .control > .label:nth-child(1) span{
+    border: 0.2rem solid #4a47ec;
+    background: transparent;
+}
+
+#one:checked:hover ~ .wrapper__control-panel > .control > .label:nth-child(1) span{
+    border: 0.2rem solid #d8d8dd;
+}
+
+
+#two:checked ~ .wrapper__slider > .slider_display > .slider_inner{
+    transform: translateX(-25%);
+}
+#two:checked ~ .wrapper__control-panel .label:nth-child(2) span{
+    border: 0.2rem solid #4a47ec;
+    background: transparent;
+}
+#two:checked:hover ~ .wrapper__control-panel > .control > .label:nth-child(2) span{
+    border: 0.2rem solid #d8d8dd;
+}
+
+
+#three:checked ~ .wrapper__slider > .slider_display > .slider_inner{
+    transform: translateX(-50%);
+}
+#three:checked ~ .wrapper__control-panel .label:nth-child(3) span{
+    border: 0.2rem solid #4a47ec;
+    background: transparent;
+}
+#three:checked:hover ~ .wrapper__control-panel > .control > .label:nth-child(3) span{
+    border: 0.2rem solid #d8d8dd;
+}
+
+
+#four:checked ~ .wrapper__slider > .slider_display > .slider_inner{
+    transform: translateX(-75%);
+}
+#four:checked ~ .wrapper__control-panel .label:nth-child(4) span{
+    border: 0.2rem solid #4a47ec;
+    background: transparent;
+}
+#four:checked:hover ~ .wrapper__control-panel > .control > .label:nth-child(4) span{
+    border: 0.2rem solid #d8d8dd;
+}
+
