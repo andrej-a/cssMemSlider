@@ -23,7 +23,7 @@
 
 .wrapper__slider {
     width: 100%;
-    max-height: 30rem;
+    max-height: 35rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@
     width: 100%;
     max-width: 60rem;
     height: 100%;
-    max-height: 30rem;
+    max-height: 35rem;
     margin-right: 2rem;
     margin-left: 2rem;
     border-radius: 10px;
@@ -48,21 +48,9 @@
     transition: all .3s ease;
     display: flex;
 }
-.slider_inner .image {
+.slider_inner img {
     width: 25%;
-    height: 100%;
-}
-.one {
-    background: red;
-}
-.two {
-    background: green;
-}
-.three {
-    background: blue;
-}
-.four {
-    background: yellow;
+    height: auto;
 }
 
 /* CONTROL PANEL */
@@ -125,8 +113,8 @@
     gap: 0.5rem;
 }
 .control label {
-    width: 2rem;
-    height: 2rem;
+    width: 2.3rem;
+    height: 2.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,9 +129,9 @@
     background: #4a47ec;
     transition: all .3s ease;
 }
-label:hover span{
+ label:hover span{
     background: #d8d8dd;
-}
+} 
 
 #one:checked ~ .wrapper__slider > .slider_display > .slider_inner{
     transform: translateX(0%);
@@ -151,11 +139,13 @@ label:hover span{
 #one:checked ~ .control_wrapper .description > .description__display > .description__inner{
     transform: translateX(0%);
 }
+#one:active ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(1) span{
+    background: #e70a0a;
+}
 #one:checked ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(1) span{
     border: 0.2rem solid #4a47ec;
     background: transparent;
 }
-
 #one:checked:hover ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(1) span{
     border: 0.2rem solid #d8d8dd;
 }
@@ -166,6 +156,9 @@ label:hover span{
 }
 #two:checked ~ .control_wrapper .description > .description__display > .description__inner{
     transform: translateX(-25%);
+}
+#two:active ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(2) span{
+    background: #e70a0a;
 }
 #two:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(2) span{
     border: 0.2rem solid #4a47ec;
@@ -182,6 +175,9 @@ label:hover span{
 #three:checked ~ .control_wrapper .description > .description__display > .description__inner{
     transform: translateX(-50%);
 }
+#three:active ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(3) span{
+    background: #e70a0a;
+}
 #three:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(3) span{
     border: 0.2rem solid #4a47ec;
     background: transparent;
@@ -196,6 +192,9 @@ label:hover span{
 }
 #four:checked ~ .control_wrapper .description > .description__display > .description__inner{
     transform: translateX(-75%);
+}
+#four:active ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(4) span{
+    background: #e70a0a;
 }
 #four:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(4) span{
     border: 0.2rem solid #4a47ec;
