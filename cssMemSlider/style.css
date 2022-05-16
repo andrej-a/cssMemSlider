@@ -19,6 +19,7 @@
  .wrapper input {
     width: 0;
     height: 0;
+    display: none;
 }
 
 .wrapper__slider {
@@ -206,11 +207,30 @@
 
 @media(max-width: 768px) {
     .wrapper{
-        gap: 1rem;
+        gap: 2rem;
     }
     .control_wrapper > .wrapper__control-panel {
         flex-direction: column-reverse;
         justify-content: center;
         gap: 1rem;
     }
+    .wrapper__slider {
+        max-height: 45rem;
+    }
+    
+    .slider_display {
+        max-height: 45rem;
+    }
+    
+}
+
+@media(max-width: 480px) {
+    .wrapper__slider {
+        max-height: 30rem;
+    }
+    
+    .slider_display {
+        max-height: 30rem;
+    }
+    
 }
