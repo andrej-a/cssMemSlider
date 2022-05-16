@@ -7,13 +7,13 @@
 /*WRAPPER*/
 .wrapper {
     width: 100%;
-    min-height: 50rem;
-    height: 100vh;
+    min-height: 100vh;
     background: #19191a;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;;
 }
 
  .wrapper input {
@@ -51,7 +51,7 @@
 }
 .slider_inner img {
     width: 25%;
-    height: auto;
+    height: 35rem;
 }
 
 /* CONTROL PANEL */
@@ -141,7 +141,7 @@
     transform: translateX(0%);
 }
 #one:active ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(1) span{
-    background: #e70a0a;
+    background: #ecfc12;
 }
 #one:checked ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(1) span{
     border: 0.2rem solid #4a47ec;
@@ -159,7 +159,7 @@
     transform: translateX(-25%);
 }
 #two:active ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(2) span{
-    background: #e70a0a;
+    background: #ecfc12;
 }
 #two:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(2) span{
     border: 0.2rem solid #4a47ec;
@@ -177,7 +177,7 @@
     transform: translateX(-50%);
 }
 #three:active ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(3) span{
-    background: #e70a0a;
+    background: #ecfc12;
 }
 #three:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(3) span{
     border: 0.2rem solid #4a47ec;
@@ -195,7 +195,7 @@
     transform: translateX(-75%);
 }
 #four:active ~ .control_wrapper > .wrapper__control-panel > .control > .label:nth-child(4) span{
-    background: #e70a0a;
+    background: #ecfc12;
 }
 #four:checked ~ .control_wrapper > .wrapper__control-panel .label:nth-child(4) span{
     border: 0.2rem solid #4a47ec;
@@ -206,9 +206,6 @@
 }
 
 @media(max-width: 768px) {
-    .wrapper{
-        gap: 2rem;
-    }
     .control_wrapper > .wrapper__control-panel {
         flex-direction: column-reverse;
         justify-content: center;
@@ -231,6 +228,11 @@
     
     .slider_display {
         max-height: 30rem;
+    }
+
+    .slider_inner img {
+        width: 25%;
+        height: 30rem;
     }
     
 }
